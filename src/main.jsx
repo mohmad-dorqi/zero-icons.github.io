@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ToastContainer } from "react-toastify";
 import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("zero-icons")).render(
-	<>
+	<BrowserRouter>
 		<App />
 
 		<ToastContainer
@@ -21,5 +22,5 @@ ReactDOM.createRoot(document.getElementById("zero-icons")).render(
 			pauseOnHover
 			theme="colored"
 		/>
-	</>,
+	</BrowserRouter>,
 );

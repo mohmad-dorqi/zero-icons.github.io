@@ -1,7 +1,7 @@
 const Sidebar = props => {
 	return (
 		<div {...props}>
-			<h1>ساید بار</h1>
+			<h1></h1>
 		</div>
 	);
 };

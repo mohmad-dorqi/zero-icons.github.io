@@ -2,6 +2,7 @@ import ShowIcon from "./Components/ShowIcon";
 import DocHugeIcon from "./Components/DocHugeIcon";
 import Sidebar from "./Components/Sidebar";
 import Header from "./Components/Header";
+import { Router, Route } from "react-router-dom";
 
 function App() {
 	return (
@@ -17,6 +18,9 @@ function App() {
 
 					<ShowIcon />
 				</div>
+				<Router>
+					<Route path="/" />
+				</Router>
 			</main>
 		</>
 	);
