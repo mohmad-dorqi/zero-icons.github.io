@@ -8,7 +8,7 @@ const Sidebar = props => {
 		},
 		{
 			name: "Huge Icons",
-			link: "/huge-icons",
+			link: "/hugeicons",
 		},
 	];
 

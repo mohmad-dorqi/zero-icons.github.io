@@ -6,7 +6,7 @@ const PageRoute = () => {
 	return (
 		<Routes>
 			<Route path="/" element={<Home />} />
-			<Route path="/huge-icons" element={<HugeIcons />} />
+			<Route path="/hugeicons" element={<HugeIcons />} />
 		</Routes>
 	);
 };
