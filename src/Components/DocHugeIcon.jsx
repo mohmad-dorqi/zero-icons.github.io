@@ -35,7 +35,7 @@ const Description = () => {
 	);
 };
 
-const Installation = () => {
+export const Installation = () => {
 	return (
 		<>
 			<h2 className="py-2 px-5 text-primary font-bold text-base lg:text-lg xl:text-xl">
