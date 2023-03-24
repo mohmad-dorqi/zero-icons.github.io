@@ -40,7 +40,7 @@ const ShowIcon = () => {
 	];
 
 	return (
-		<ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] text-">
+		<ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(115px,1fr))] text-">
 			{keys &&
 				keys.map((iconName, index) => {
 					const IconComponent = ListIconOutline[iconName];
@@ -55,11 +55,11 @@ const ShowIcon = () => {
 										copied === iconName ? "border-red-700" : ""
 									} rounded-lg p-5 cursor-pointer`}>
 									<IconComponent
-										size="7rem"
+										size="4.2rem"
 										className={colors[Math.floor(Math.random() * 17)]}
 									/>
 								</span>
-								<span className="font-bold">{iconName}</span>
+								<span className="font-bold text-xs">{iconName}</span>
 							</li>
 						</CopyToClipboard>
 					);
