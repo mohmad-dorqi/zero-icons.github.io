@@ -15,11 +15,15 @@ const Sidebar = props => {
 	return (
 		menuSidebar && (
 			<div {...props}>
-				<ul>
+				<ul className="flex flex-col gap-5">
 					{menuSidebar.map(({ name, link }, index) => (
-						<li key={index}>
-							<NavLink to={link}>{name}</NavLink>
-						</li>
+						<NavLink
+							to={link}
+							className={({ isActive }) =>
+								isActive ? "bg-white text-primary rounded-md py-1 px-3 font-bold" : ""
+							}>
+							{name}
+						</NavLink>
 					))}
 				</ul>
 			</div>
