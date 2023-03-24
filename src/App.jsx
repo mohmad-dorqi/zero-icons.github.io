@@ -1,28 +1,24 @@
 import ShowIcon from "./Components/ShowIcon";
-import { ToastContainer } from "react-toastify";
 import DocHugeIcon from "./Components/DocHugeIcon";
+import Sidebar from "./Components/Sidebar";
+import Header from "./Components/Header";
 
 function App() {
 	return (
-		<div className="container">
-			<DocHugeIcon />
+		<>
+			<div className="md:fixed md:w-64 md:h-full bg-secondary text-white">
+				<Header />
+				<Sidebar />
+			</div>
 
-			<ShowIcon />
+			<main className="w-full md:pl-64">
+				<div className="px-5">
+					<DocHugeIcon />
 
-			<ToastContainer
-				position="bottom-center"
-				autoClose={1000}
-				limit={2}
-				hideProgressBar={false}
-				newestOnTop={false}
-				closeOnClick
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-				pauseOnHover
-				theme="colored"
-			/>
-		</div>
+					<ShowIcon />
+				</div>
+			</main>
+		</>
 	);
 }
 
