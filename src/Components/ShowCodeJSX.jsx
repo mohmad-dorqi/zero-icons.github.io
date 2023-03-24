@@ -24,7 +24,7 @@ const ShowCodeJSX = ({ code, language }) => {
 			language={exampleLanguage}
 			theme={PrismTheme}>
 			{({ className, style, tokens, getLineProps, getTokenProps }) => (
-				(className += " relative p-5 rounded-lg"),
+				(className += " relative p-5 rounded-lg overflow-auto"),
 				(
 					<pre className={className} style={style}>
 						<CopyToClipboard
