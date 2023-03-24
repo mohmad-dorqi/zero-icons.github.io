@@ -24,24 +24,25 @@ const ShowCodeJSX = ({ code, language }) => {
 			language={exampleLanguage}
 			theme={PrismTheme}>
 			{({ className, style, tokens, getLineProps, getTokenProps }) => (
-				(className += " relative p-5 rounded-lg overflow-auto "),
+				(className += " " + "overflow-auto"),
 				(
-					<pre className={className} style={style}>
+					<div className="relative bg-primary py-2 px-5 rounded-lg">
 						<CopyToClipboard
 							text={exampleCode}
-							className="absolute top-2 right-2 cursor-pointer"
+							className="absolute top-2 right-2 cursor-pointer bg-secondary text-white p-0.5 rounded"
 							onCopy={setCopy}>
-							<FileWrite />
+							<FileWrite size="1.5rem" />
 						</CopyToClipboard>
-
-						{tokens.map((line, i) => (
-							<div {...getLineProps({ line, key: i })}>
-								{line.map((token, key) => (
-									<span {...getTokenProps({ token, key })} />
-								))}
-							</div>
-						))}
-					</pre>
+						<pre className={className} style={style}>
+							{tokens.map((line, i) => (
+								<div {...getLineProps({ line, key: i })}>
+									{line.map((token, key) => (
+										<span {...getTokenProps({ token, key })} />
+									))}
+								</div>
+							))}
+						</pre>
+					</div>
 				)
 			)}
 		</Highlight>
