@@ -1,7 +1,9 @@
+import Image from "../Components/Image";
 const Header = props => {
 	return (
 		<div {...props}>
-			<h1>هدر</h1>
+			<p>Zero Icons</p>
+			<Image nameImage="zero-icons-white.svg" />
 		</div>
 	);
 };
