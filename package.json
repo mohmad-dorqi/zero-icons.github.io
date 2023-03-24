@@ -2,7 +2,7 @@
 	"name": "hugeicon",
 	"private": true,
 	"version": "0.0.1",
-	"homepage": "https://zero-icon.github.io/huge-icons",
+	"homepage": "https://zero-icon.github.io",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
