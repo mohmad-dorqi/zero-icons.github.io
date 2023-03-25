@@ -62,6 +62,7 @@ const Sidebar = props => {
 								</div>
 							) : (
 								<NavLink
+									key={index}
 									to={props.link}
 									className={({ isActive }) =>
 										isActive

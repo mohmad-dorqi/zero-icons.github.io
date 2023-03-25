@@ -102,7 +102,7 @@ const ShowIcon = () => {
 	return (
 		<div>
 			<TitleSection title="Icons Name" subTitle="Please click on icons for copy to clipboard" />
-			<ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(115px,1fr))] text-">
+			<ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(115px,1fr))]">
 				{keys &&
 					keys.map((iconName, index) => {
 						const IconComponent = ListIconOutline[iconName];
