@@ -1,5 +1,6 @@
 import Image from "./Image";
 import ShowCodeJSX from "./ShowCodeJSX";
+import TitleSection, { Text } from "./TitleSection";
 
 export const Description = () => {
 	return (
@@ -53,14 +54,12 @@ export const Description = () => {
 export const Installation = () => {
 	return (
 		<>
-			<h2 className="py-5 px-2 text-primary font-bold text-base lg:text-lg xl:text-xl">
-				Installation For npm
-			</h2>
+			<TitleSection title="Installation For npm"/>
+
 			<ShowCodeJSX code={`npm i react-huge-icons`} language="bash" />
 
-			<h2 className="py-5 px-2 text-primary font-bold text-base lg:text-lg xl:text-xl">
-				Installation For Yarn
-			</h2>
+			<TitleSection title="Installation For Yarn"/>
+
 			<ShowCodeJSX code={`yarn add react-huge-icons`} language="bash" />
 		</>
 	);
@@ -69,12 +68,8 @@ export const Installation = () => {
 export const Usage = () => {
 	return (
 		<>
-			<div className="py-5 px-2">
-				<h2 className="text-primary font-bold text-base lg:text-lg xl:text-xl">
-					Usage
-				</h2>
-				<p>Outline Icons</p>
-			</div>
+			<TitleSection title="Usage" subTitle="Outline Icons"/>
+
 			<ShowCodeJSX
 				code={`
 import { Archive } from "react-huge-icons/outline";
@@ -92,13 +87,8 @@ export default App;
 				language="bash"
 			/>
 
-			<div className="py-5 px-2">
-				<h2 className="text-primary font-bold text-base lg:text-lg xl:text-xl">
-					Usage
-				</h2>
+			<TitleSection title="Usage" subTitle="Solid Icons"/>
 
-				<p>Solid Icons</p>
-			</div>
 			<ShowCodeJSX
 				code={`
 import { Archive } from "react-huge-icons/solid";
@@ -121,11 +111,11 @@ export default App;
 
 const DocHugeIcon = () => {
 	return (
-		<>
+		<div className="py-5">
 			<Description />
 			<Installation />
 			<Usage />
-		</>
+		</div>
 	);
 };
 

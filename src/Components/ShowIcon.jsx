@@ -3,6 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TitleSection, { Text } from "./TitleSection";
 
 const ShowIcon = () => {
 	const keys = Object.keys(ListIconOutline);
@@ -99,34 +100,37 @@ const ShowIcon = () => {
 	];
 
 	return (
-		<ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(115px,1fr))] text-">
-			{keys &&
-				keys.map((iconName, index) => {
-					const IconComponent = ListIconOutline[iconName];
+		<div>
+			<TitleSection title="Icons Name" subTitle="Please click on icons for copy to clipboard" />
+			<ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(115px,1fr))] text-">
+				{keys &&
+					keys.map((iconName, index) => {
+						const IconComponent = ListIconOutline[iconName];
 
-					const randomNumber = Math.floor(Math.random() * 17);
+						const randomNumber = Math.floor(Math.random() * 17);
 
-					return (
-						<CopyToClipboard
-							text={`<` + `${iconName} />`}
-							onCopy={() => setCopy(iconName)}
-							key={index}>
-							<li className="p-5 flex flex-col items-center gap-3">
-								<span
-									className={`border-2 ${
-										copied === iconName ? colors[randomNumber].border : ""
-									} rounded-lg p-5 cursor-pointer`}>
-									<IconComponent
-										size="4.2rem"
-										className={colors[randomNumber].text}
-									/>
-								</span>
-								<span className="font-bold text-xs">{iconName}</span>
-							</li>
-						</CopyToClipboard>
-					);
-				})}
-		</ul>
+						return (
+							<CopyToClipboard
+								text={`<` + `${iconName} />`}
+								onCopy={() => setCopy(iconName)}
+								key={index}>
+								<li className="p-5 flex flex-col items-center gap-3">
+									<span
+										className={`border-2 ${
+											copied === iconName ? colors[randomNumber].border : ""
+										} rounded-lg p-5 cursor-pointer`}>
+										<IconComponent
+											size="4.2rem"
+											className={colors[randomNumber].text}
+										/>
+									</span>
+									<span className="font-bold text-xs">{iconName}</span>
+								</li>
+							</CopyToClipboard>
+						);
+					})}
+			</ul>
+		</div>
 	);
 };
 

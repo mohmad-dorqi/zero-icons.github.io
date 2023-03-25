@@ -14,10 +14,6 @@ const Sidebar = props => {
 			megaMenuName: "Svg Converte",
 			megaMenuList: [
 				{
-					name: "Installation",
-					link: "/svgconverte-installation",
-				},
-				{
 					name: "Usage",
 					link: "/svgconverte",
 				},
